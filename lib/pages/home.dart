@@ -22,80 +22,72 @@ class _HomeState extends State<Home> {
                     bottomRight: Radius.circular(20)),
                 color: Color.fromARGB(255, 12, 37, 57),
               ),
-              child: const Column(children: [
+              child: Column(children: [
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'Credential Safe',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 30,
                             fontWeight: FontWeight.bold),
                       ),
-                      Image(
-                        image: AssetImage('assets/Vector.png'),
-                      ),
+                      Image.asset('assets/Vector.png'),
                     ]),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextField(
                   decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search),
+                      prefixIcon: const Icon(Icons.search),
                       fillColor: Colors.grey,
                       filled: true,
-                      border: OutlineInputBorder()),
+                      hintText: 'Search',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20))),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
-                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Category',
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 20),
                     ),
-                    SizedBox(width: 210),
-                    Icon(
+                    const SizedBox(width: 190),
+                    const Icon(
                       Icons.arrow_drop_down,
                       color: Colors.white,
                     ),
-                    SizedBox(width: 5),
-                    Image(image: AssetImage('assets/Icon.png')),
+                    Image.asset('assets/Icon.png'),
                   ],
                 )
               ])),
           const SizedBox(height: 20),
           Container(
             padding: const EdgeInsets.all(20),
-            child: const Column(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Align(
-                  alignment: Alignment.center, // Center the "02 entries" text
+                const Align(
+                  alignment: Alignment.center,
                   child: Text('02 entries'),
                 ),
-                SizedBox(height: 20),
-                Text(
+                const SizedBox(height: 20),
+                const Text(
                   'A',
                   textAlign: TextAlign.left,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   children: [
-                    Image(
-                      image: AssetImage(
-                        'assets/Amazon.png',
-                      ),
-                      //  width: 60,
-                      //  height: 100,
-                      fit: BoxFit.contain,
-                    ),
-                    SizedBox(
+                    Image.asset('assets/Amazon.png'),
+                    const SizedBox(
                       width: 40,
                     ),
-                    Column(
+                    const Column(
                       children: [
                         Text(
                           'Amazon',
@@ -112,19 +104,19 @@ class _HomeState extends State<Home> {
                     )
                   ],
                 ),
-                SizedBox(height: 20),
-                Text(
+                const SizedBox(height: 20),
+                const Text(
                   'F',
                   textAlign: TextAlign.left,
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Row(
                   children: [
-                    Image(image: AssetImage('assets/Facebook.png')),
-                    SizedBox(
+                    Image.asset('assets/Facebook.png'),
+                    const SizedBox(
                       width: 40,
                     ),
-                    Column(
+                    const Column(
                       children: [
                         Text(
                           'Facebook',

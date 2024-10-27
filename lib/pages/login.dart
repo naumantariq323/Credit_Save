@@ -14,20 +14,24 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
             padding: const EdgeInsets.all(30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Image(image: AssetImage('assets/Logo.jpg')),
+                Image.asset(
+                  'assets/Logo.jpg',
+                  height: 90,
+                ),
                 const SizedBox(height: 20),
                 const Text(
                   'CredentialSafe',
                   style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
-                  ),
+                      color: Color.fromARGB(255, 12, 37, 57),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -77,15 +81,13 @@ class _LoginState extends State<Login> {
                       context,
                       MaterialPageRoute(builder: (context) => const Home()),
                     );
-                    // Action for button press
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 22, 36, 48),
                     minimumSize: const Size(300, 50),
                     side: const BorderSide(color: Colors.black),
                     shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the desired radius
+                      borderRadius: BorderRadius.circular(10),
                     ),
                   ),
                   child: const Text(

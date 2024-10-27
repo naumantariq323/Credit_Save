@@ -28,35 +28,20 @@ class _MyWidgetState extends State<AddEntity1> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Icon(Icons.arrow_back_ios, color: Colors.white),
+                    Text(
+                      'Facebook',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    ),
                     Icon(
-                      Icons.save,
+                      Icons.edit,
                       color: Colors.white,
                     )
                   ],
                 ),
                 SizedBox(height: 20),
-                Align(
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      'Title',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    )),
-                SizedBox(height: 20),
-                Text(
-                  'Add Title',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Divider(
-                  height: 10,
-                  thickness: 2,
-                  color: Colors.white,
-                )
               ],
             ),
           ),

@@ -22,10 +22,10 @@ class _MyWidgetState extends State<AddEntity> {
             decoration: const BoxDecoration(
               color: Color.fromARGB(255, 12, 37, 57),
             ),
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Icon(Icons.arrow_back_ios, color: Colors.white),
@@ -35,28 +35,25 @@ class _MyWidgetState extends State<AddEntity> {
                     )
                   ],
                 ),
-                const SizedBox(height: 20),
-                Container(
-                  child: const Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        'Title',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      )),
-                ),
-                const SizedBox(height: 20),
-                Container(
-                    child: const Text(
+                SizedBox(height: 20),
+                Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      'Title',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    )),
+                SizedBox(height: 20),
+                Text(
                   'Add Title',
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
-                )),
-                const SizedBox(
+                ),
+                SizedBox(
                   height: 20,
                 ),
-                const Divider(
+                Divider(
                   height: 10,
                   thickness: 2,
                   color: Colors.white,
@@ -132,17 +129,18 @@ class _MyWidgetState extends State<AddEntity> {
                 const SizedBox(height: 10),
                 Container(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
                         height: 5,
-                        width: 190,
+                        width: 150,
                         decoration: const BoxDecoration(
                           color: Color.fromARGB(255, 12, 37, 57),
                         ),
                       ),
                       Container(
                         height: 5,
-                        width: 190,
+                        width: 150,
                         decoration: const BoxDecoration(
                           color: Color.fromARGB(255, 194, 193, 193),
                         ),
@@ -166,12 +164,9 @@ class _MyWidgetState extends State<AddEntity> {
                   children: [
                     Text('Website'),
                     SizedBox(
-                      width: 250,
+                      width: 220,
                     ),
                     Icon(Icons.edit),
-                    SizedBox(
-                      width: 10,
-                    ),
                     Icon(Icons.delete)
                   ],
                 ),

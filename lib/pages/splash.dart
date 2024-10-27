@@ -41,10 +41,12 @@ class _SplashScreenState extends State<SplashScreen> {
           const Text(
             'Credential Safe',
             style: TextStyle(
-                color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 20),
+                color: Color.fromARGB(255, 12, 37, 57),
+                fontWeight: FontWeight.w700,
+                fontSize: 30),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 20),
           const Text(
             "Password Manager",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
