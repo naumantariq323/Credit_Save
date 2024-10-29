@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 class AddEntity1 extends StatefulWidget {
   const AddEntity1({super.key});
@@ -88,7 +89,8 @@ class _MyWidgetState extends State<AddEntity1> {
                 const SizedBox(height: 20),
                 const Text('Username'),
                 const SizedBox(height: 20),
-                TextField(
+                FormBuilderTextField(
+                  name: "Input",
                   decoration: InputDecoration(
                     hintText: 'John Alex',
                     border: OutlineInputBorder(
@@ -198,7 +200,8 @@ class _MyWidgetState extends State<AddEntity1> {
                 const SizedBox(height: 30),
                 const Text('Note'),
                 const SizedBox(height: 20),
-                TextField(
+                FormBuilderTextField(
+                  name: "input",
                   decoration: InputDecoration(
                       hintText: 'John Alex',
                       border: OutlineInputBorder(

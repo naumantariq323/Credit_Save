@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:credit_save/pages/home.dart';
 
+import 'package:flutter_form_builder/flutter_form_builder.dart';
+
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -46,8 +48,9 @@ class _LoginState extends State<Login> {
                   child: Text('Email'),
                 ),
                 const SizedBox(height: 20),
-                const TextField(
-                  decoration: InputDecoration(
+                FormBuilderTextField(
+                  name: 'email',
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -59,8 +62,9 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const TextField(
-                  decoration: InputDecoration(
+                FormBuilderTextField(
+                  name: "Password",
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                   ),
                 ),
