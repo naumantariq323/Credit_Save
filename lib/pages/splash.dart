@@ -19,11 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   config() async {
     await Future.delayed(const Duration(milliseconds: 1900));
     Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const Login(),
-      ),
-    );
+        context, MaterialPageRoute(builder: (context) => const Login()));
   }
 
   @override
@@ -32,26 +28,28 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
+        children: [
           Image.asset(
             AppAssets.logo,
-            height: 150,
+            height: 200,
           ),
-          const SizedBox(height: 30),
           const Text(
             'Credential Safe',
             style: TextStyle(
-                color: Color.fromARGB(255, 12, 37, 57),
-                fontWeight: FontWeight.w700,
-                fontSize: 30),
+                color: Color(
+                  0xFF14244c,
+                ),
+                fontSize: 25,
+                fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           const Text(
-            "Password Manager",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            'Password Manager',
+            style: TextStyle(
+                color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
-          ),
+          )
         ],
       ),
     );

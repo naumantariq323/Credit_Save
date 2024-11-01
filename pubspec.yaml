@@ -61,11 +61,11 @@ flutter:
     - assets/Vector.png
     - assets/Icon.png
     - assets/Amazon.png
-    - assets/Facebook.png
+    - assets/Facebook(1).png
     - assets/Arrow.png
     - assets/Save.png
     - assets/Plus.png
-    - assets/Facebook(2).png
+    - assets/Facebook.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
   # For details regarding adding assets from package dependencies, see

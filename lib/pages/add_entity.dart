@@ -1,4 +1,5 @@
 import 'package:credit_save/pages/add_entity1.dart';
+import 'package:credit_save/pages/home.dart';
 import 'package:flutter/material.dart';
 
 class AddEntity extends StatefulWidget {
@@ -19,23 +20,36 @@ class _MyWidgetState extends State<AddEntity> {
           Container(
             padding: const EdgeInsets.all(20),
             decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 12, 37, 57),
+              color: Color(
+                0xFF14244c,
+              ),
             ),
-            child: const Column(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.arrow_back_ios, color: Colors.white),
-                    Icon(
+                    IconButton(
+                      icon: const Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Home()));
+                      },
+                    ),
+                    const Icon(
                       Icons.save,
                       color: Colors.white,
                     )
                   ],
                 ),
-                SizedBox(height: 20),
-                Align(
+                const SizedBox(height: 20),
+                const Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       'Title',
@@ -43,16 +57,16 @@ class _MyWidgetState extends State<AddEntity> {
                         color: Colors.white,
                       ),
                     )),
-                SizedBox(height: 20),
-                Text(
+                const SizedBox(height: 20),
+                const Text(
                   'Add Title',
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Divider(
+                const Divider(
                   height: 10,
                   thickness: 2,
                   color: Colors.white,
@@ -73,7 +87,9 @@ class _MyWidgetState extends State<AddEntity> {
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 12, 37, 57),
+                        backgroundColor: const Color(
+                          0xFF14244c,
+                        ),
                       ),
                       child: const Text(
                         'Social',
@@ -82,7 +98,9 @@ class _MyWidgetState extends State<AddEntity> {
                     ),
                     const Icon(
                       Icons.add,
-                      color: Color.fromARGB(255, 12, 37, 57),
+                      color: Color(
+                        0xFF14244c,
+                      ),
                     )
                   ],
                 ),
@@ -126,26 +144,26 @@ class _MyWidgetState extends State<AddEntity> {
                           borderRadius: BorderRadius.circular(10))),
                 ),
                 const SizedBox(height: 10),
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 5,
-                        width: 150,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 12, 37, 57),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 5,
+                      width: 150,
+                      decoration: const BoxDecoration(
+                        color: Color(
+                          0xFF14244c,
                         ),
                       ),
-                      Container(
-                        height: 5,
-                        width: 150,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 194, 193, 193),
-                        ),
+                    ),
+                    Container(
+                      height: 5,
+                      width: 150,
+                      decoration: const BoxDecoration(
+                        color: Color.fromARGB(255, 194, 193, 193),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 10),
                 const Align(
@@ -182,7 +200,9 @@ class _MyWidgetState extends State<AddEntity> {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 12, 37, 57),
+                        backgroundColor: const Color(
+                          0xFF14244c,
+                        ),
                       ),
                       child: const Text(
                         'Add Field',
@@ -221,7 +241,9 @@ class _MyWidgetState extends State<AddEntity> {
                         Text(
                           'Testing User',
                           style: TextStyle(
-                              color: Color.fromARGB(255, 12, 37, 57),
+                              color: Color(
+                                0xFF14244c,
+                              ),
                               fontWeight: FontWeight.bold),
                         ),
                         Text('Testing@gmail.com')
@@ -239,7 +261,9 @@ class _MyWidgetState extends State<AddEntity> {
                       children: [
                         Text('Testing User',
                             style: TextStyle(
-                                color: Color.fromARGB(255, 12, 37, 57),
+                                color: Color(
+                                  0xFF14244c,
+                                ),
                                 fontWeight: FontWeight.bold)),
                         Text('Testing@gmail.com')
                       ],
@@ -256,7 +280,9 @@ class _MyWidgetState extends State<AddEntity> {
                       children: [
                         Text('Testing User',
                             style: TextStyle(
-                                color: Color.fromARGB(255, 12, 37, 57),
+                                color: Color(
+                                  0xFF14244c,
+                                ),
                                 fontWeight: FontWeight.bold)),
                         Text('Testing@gmail.com')
                       ],
@@ -284,8 +310,9 @@ class _MyWidgetState extends State<AddEntity> {
                                   builder: (context) => AddEntity1()));
                         },
                         style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                const Color.fromARGB(255, 22, 36, 48),
+                            backgroundColor: const Color(
+                              0xFF14244c,
+                            ),
                             minimumSize: const Size(300, 50),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20))),

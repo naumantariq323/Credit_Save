@@ -1,5 +1,7 @@
+import 'package:credit_save/export.dart';
 import 'package:credit_save/pages/add_entity.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -20,7 +22,9 @@ class _HomeState extends State<Home> {
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20)),
-                color: Color.fromARGB(255, 12, 37, 57),
+                color: Color(
+                  0xFF14244c,
+                ),
               ),
               child: Column(children: [
                 Row(
@@ -33,16 +37,21 @@ class _HomeState extends State<Home> {
                             fontSize: 30,
                             fontWeight: FontWeight.bold),
                       ),
-                      Image.asset('assets/Vector.png'),
+                      Image.asset(AppAssets.vector),
                     ]),
                 const SizedBox(height: 20),
-                TextField(
+                FormBuilderTextField(
+                  name: "Search",
                   decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.search),
-                      fillColor: Colors.grey,
+                      prefixIcon: const Icon(
+                        Icons.search,
+                      ),
+                      fillColor: const Color.fromARGB(255, 201, 190, 190),
                       filled: true,
-                      hintText: 'Search',
-                      border: OutlineInputBorder(
+                      labelText: 'Search',
+                      enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              const BorderSide(color: Colors.white, width: 1),
                           borderRadius: BorderRadius.circular(20))),
                 ),
                 const SizedBox(height: 20),
@@ -56,12 +65,12 @@ class _HomeState extends State<Home> {
                           fontWeight: FontWeight.bold,
                           fontSize: 20),
                     ),
-                    const SizedBox(width: 190),
+                    const SizedBox(width: 150),
                     const Icon(
                       Icons.arrow_drop_down,
                       color: Colors.white,
                     ),
-                    Image.asset('assets/Icon.png'),
+                    Image.asset(AppAssets.icon)
                   ],
                 )
               ])),
@@ -83,7 +92,7 @@ class _HomeState extends State<Home> {
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    Image.asset('assets/Amazon.png'),
+                    Image.asset(AppAssets.amazon),
                     const SizedBox(
                       width: 40,
                     ),
@@ -112,7 +121,7 @@ class _HomeState extends State<Home> {
                 const SizedBox(height: 30),
                 Row(
                   children: [
-                    Image.asset('assets/Facebook.png'),
+                    Image.asset(AppAssets.facebook),
                     const SizedBox(
                       width: 40,
                     ),
@@ -142,10 +151,12 @@ class _HomeState extends State<Home> {
                   MaterialPageRoute(builder: (context) => const AddEntity()));
             },
             style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 22, 36, 48),
-                maximumSize: const Size(300, 50),
+                backgroundColor: const Color(
+                  0xFF14244c,
+                ),
+                minimumSize: const Size(300, 50),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20))),
+                    borderRadius: BorderRadius.circular(10))),
             child: const Text(
               'Next',
               style: TextStyle(color: Colors.white),
