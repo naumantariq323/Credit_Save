@@ -1,4 +1,6 @@
 import 'package:credit_save/export.dart';
+import 'package:credit_save/constants.dart';
+import 'package:credit_save/pages/register.dart';
 import 'package:flutter/material.dart';
 
 import 'package:credit_save/pages/home.dart';
@@ -20,7 +22,7 @@ class _LoginState extends State<Login> {
       Container(
         padding: EdgeInsets.all(10),
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
               AppAssets.logo,
@@ -30,9 +32,7 @@ class _LoginState extends State<Login> {
             const Text(
               'Credential Safe',
               style: TextStyle(
-                  color: Color(
-                    0xFF14244c,
-                  ),
+                  color: appPrimarycolor,
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
             ),
@@ -71,7 +71,9 @@ class _LoginState extends State<Login> {
               alignment: Alignment.bottomRight,
               child: Text(
                 'Forgot Password?',
-                style: TextStyle(color: Color(0xFF14244c)),
+                style: TextStyle(
+                  color: appPrimarycolor,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -81,7 +83,7 @@ class _LoginState extends State<Login> {
                       MaterialPageRoute(builder: (context) => const Home()));
                 },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF14244c),
+                    backgroundColor: appPrimarycolor,
                     minimumSize: const Size(300, 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
@@ -93,7 +95,23 @@ class _LoginState extends State<Login> {
             const SizedBox(
               height: 10,
             ),
-            const Text('Donot have account? Create account')
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Donot have account?'),
+                const SizedBox(width: 7),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => Register()));
+                  },
+                  child: const Text(
+                    "Create account",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
+            )
           ],
         ),
       )

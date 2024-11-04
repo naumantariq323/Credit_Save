@@ -1,6 +1,7 @@
 import 'package:credit_save/pages/add_entity1.dart';
 import 'package:credit_save/pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:credit_save/constants.dart';
 
 class AddEntity extends StatefulWidget {
   const AddEntity({super.key});
@@ -14,66 +15,69 @@ class _MyWidgetState extends State<AddEntity> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: const BoxDecoration(
-              color: Color(
-                0xFF14244c,
-              ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                      icon: const Icon(
-                        Icons.arrow_back_ios,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Home()));
-                      },
-                    ),
-                    const Icon(
-                      Icons.save,
-                      color: Colors.white,
-                    )
-                  ],
-                ),
-                const SizedBox(height: 20),
-                const Align(
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      'Title',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    )),
-                const SizedBox(height: 20),
-                const Text(
-                  'Add Title',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Divider(
-                  height: 10,
-                  thickness: 2,
+
+
+
+        appBar: AppBar(
+          backgroundColor: appPrimarycolor,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                icon: const Icon(
+                  Icons.arrow_back_ios,
                   color: Colors.white,
-                )
-              ],
-            ),
+                ),
+                onPressed: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => const Home()));
+                },
+              ),
+              IconButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => AddEntity1()));
+                  },
+                  icon: const Icon(
+                    Icons.save,
+                    color: Colors.white,
+                  ))
+            ],
           ),
+        ),
+        body: SingleChildScrollView(
+            child: Column(children: [
+          Container(
+              padding: const EdgeInsets.all(20),
+              decoration: const BoxDecoration(
+                color: appPrimarycolor,
+              ),
+              child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          'Title',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        )),
+                    SizedBox(height: 20),
+                    Text(
+                      'Add Title',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Divider(
+                      height: 10,
+                      thickness: 2,
+                      color: Colors.white,
+                    ),
+                  ])),
           Container(
             padding: const EdgeInsets.all(20),
             child: Column(
@@ -87,9 +91,7 @@ class _MyWidgetState extends State<AddEntity> {
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(
-                          0xFF14244c,
-                        ),
+                        backgroundColor: appPrimarycolor,
                       ),
                       child: const Text(
                         'Social',
@@ -151,9 +153,7 @@ class _MyWidgetState extends State<AddEntity> {
                       height: 5,
                       width: 150,
                       decoration: const BoxDecoration(
-                        color: Color(
-                          0xFF14244c,
-                        ),
+                        color: appPrimarycolor,
                       ),
                     ),
                     Container(
@@ -171,7 +171,7 @@ class _MyWidgetState extends State<AddEntity> {
                   child: Text(
                     'Medium',
                     style: TextStyle(
-                        color: Color.fromARGB(255, 12, 37, 57),
+                        color: appPrimarycolor,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -200,9 +200,7 @@ class _MyWidgetState extends State<AddEntity> {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(
-                          0xFF14244c,
-                        ),
+                        backgroundColor: appPrimarycolor,
                       ),
                       child: const Text(
                         'Add Field',
@@ -241,9 +239,7 @@ class _MyWidgetState extends State<AddEntity> {
                         Text(
                           'Testing User',
                           style: TextStyle(
-                              color: Color(
-                                0xFF14244c,
-                              ),
+                              color: appPrimarycolor,
                               fontWeight: FontWeight.bold),
                         ),
                         Text('Testing@gmail.com')
@@ -261,9 +257,7 @@ class _MyWidgetState extends State<AddEntity> {
                       children: [
                         Text('Testing User',
                             style: TextStyle(
-                                color: Color(
-                                  0xFF14244c,
-                                ),
+                                color: appPrimarycolor,
                                 fontWeight: FontWeight.bold)),
                         Text('Testing@gmail.com')
                       ],
@@ -280,9 +274,7 @@ class _MyWidgetState extends State<AddEntity> {
                       children: [
                         Text('Testing User',
                             style: TextStyle(
-                                color: Color(
-                                  0xFF14244c,
-                                ),
+                                color: appPrimarycolor,
                                 fontWeight: FontWeight.bold)),
                         Text('Testing@gmail.com')
                       ],
@@ -299,34 +291,11 @@ class _MyWidgetState extends State<AddEntity> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
                 ),
-                const SizedBox(height: 30),
-                Align(
-                    alignment: Alignment.bottomCenter,
-                    child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => AddEntity1()));
-                        },
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(
-                              0xFF14244c,
-                            ),
-                            minimumSize: const Size(300, 50),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20))),
-                        child: const Text(
-                          'Next',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        )))
               ],
             ),
-          )
-        ],
-      ),
-    ));
+          ),
+        ])));
   }
 }
+
+

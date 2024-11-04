@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:credit_save/pages/login.dart';
 import 'package:credit_save/export.dart';
+import 'package:credit_save/constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -36,9 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
           const Text(
             'Credential Safe',
             style: TextStyle(
-                color: Color(
-                  0xFF14244c,
-                ),
+                color: appPrimarycolor,
                 fontSize: 25,
                 fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,

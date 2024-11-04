@@ -2,6 +2,7 @@ import 'package:credit_save/export.dart';
 import 'package:credit_save/pages/add_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:credit_save/constants.dart';
 
 class AddEntity1 extends StatefulWidget {
   const AddEntity1({super.key});
@@ -16,9 +17,7 @@ class _MyWidgetState extends State<AddEntity1> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color(
-            0xFF14244c,
-          ),
+          backgroundColor: appPrimarycolor,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -65,9 +64,7 @@ class _MyWidgetState extends State<AddEntity1> {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(
-                        0xFF14244c,
-                      ),
+                      backgroundColor: appPrimarycolor,
                     ),
                     child: const Text(
                       'Social',
@@ -144,10 +141,7 @@ class _MyWidgetState extends State<AddEntity1> {
                   Text(
                     'Testing User',
                     style: TextStyle(
-                        color: Color(
-                          0xFF14244c,
-                        ),
-                        fontWeight: FontWeight.bold),
+                        color: appPrimarycolor, fontWeight: FontWeight.bold),
                   ),
                   Text('Testing@gmail.com')
                 ],
@@ -158,10 +152,7 @@ class _MyWidgetState extends State<AddEntity1> {
                 children: [
                   Text('Testing User',
                       style: TextStyle(
-                          color: Color(
-                            0xFF14244c,
-                          ),
-                          fontWeight: FontWeight.bold)),
+                          color: appPrimarycolor, fontWeight: FontWeight.bold)),
                   Text('Testing@gmail.com')
                 ],
               ),
@@ -171,10 +162,7 @@ class _MyWidgetState extends State<AddEntity1> {
                 children: [
                   Text('Testing User',
                       style: TextStyle(
-                          color: Color(
-                            0xFF14244c,
-                          ),
-                          fontWeight: FontWeight.bold)),
+                          color: appPrimarycolor, fontWeight: FontWeight.bold)),
                   Text('Testing@gmail.com')
                 ],
               ),
